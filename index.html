@@ -13,23 +13,47 @@
       color: #222;
     }
 
+    /* ===== HEADER BANNER ===== */
     header {
-      background: linear-gradient(90deg, #004080, #0073e6);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: linear-gradient(90deg, #003366, #0059b3);
       color: white;
+      padding: 30px 20px;
+      flex-wrap: wrap;
       text-align: center;
-      padding: 40px 20px;
     }
 
-    img.profile {
-      width: 200px;
-      height: 200px;
+    .profile {
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #fff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      margin-bottom: 15px;
     }
 
+    .logo {
+      width: 300px;
+      height: auto;
+    }
+
+    .header-text {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .header-text h1 {
+      margin: 10px 0;
+      color: #fff;
+    }
+
+    .header-text p {
+      margin: 5px 0;
+    }
+
+    /* ===== SECTIONS ===== */
     section {
       background: #fff;
       border-radius: 12px;
@@ -39,7 +63,7 @@
       max-width: 900px;
     }
 
-    h1, h2 {
+    h2 {
       color: #004080;
     }
 
@@ -63,20 +87,19 @@
 
     footer {
       text-align: center;
-      background: #004080;
+      background: #003366;
       color: white;
       padding: 15px;
       font-size: 14px;
       margin-top: 40px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       header {
-        padding: 20px 10px;
+        flex-direction: column;
       }
-      img.profile {
-        width: 150px;
-        height: 150px;
+      .header-text {
+        text-align: center;
       }
     }
   </style>
@@ -84,13 +107,18 @@
 
 <body>
 
+  <!-- ===== HEADER SECTION ===== -->
   <header>
+    <img src="WhatsApp Image 2025-11-09 at 6.48.48 PM.jpeg" alt="IBBI Logo" class="logo">
+    <div class="header-text">
+      <h1>Dr. Paritosh Srivastava</h1>
+      <p><strong>IBBI Registered Valuer | ESG Mentor | Environmental Engineer | Data Science Expert</strong></p>
+      <p>B.Tech (Civil & Agricultural Engg) | M.Tech (Env Engg, IIT) | M.Tech (Data Science - Pursuing) | Ph.D. (NIT Allahabad)</p>
+    </div>
     <img src="1727873783428.jfif" alt="Dr. Paritosh Srivastava" class="profile">
-    <h1>Dr. Paritosh Srivastava</h1>
-    <p>IBBI Registered Valuer | ESG Mentor | Environmental Engineer | Data Science Expert</p>
-    <p><strong>B.Tech (Civil & Agricultural Engg) | M.Tech (Env Engg, IIT) | M.Tech (Data Science - Pursuing) | Ph.D. (NIT Allahabad)</strong></p>
   </header>
 
+  <!-- ===== ABOUT SECTION ===== -->
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -124,6 +152,7 @@
     </p>
   </section>
 
+  <!-- ===== CONTACT SECTION ===== -->
   <section id="contact">
     <h2>Contact Me</h2>
     <p>📧 Email: <a href="mailto:dr.valuer@yahoo.com">dr.valuer@yahoo.com</a></p>
@@ -135,6 +164,7 @@
     <p>📱 Phone: +91-7053618311</p>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
     <p>© 2025 Dr. Paritosh Srivastava | Built with ❤️ using GitHub Pages</p>
   </footer>
