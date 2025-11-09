@@ -13,7 +13,7 @@
       line-height: 1.6;
     }
 
-    /* ---------- Navigation Bar ---------- */
+    /* Navigation Bar */
     nav {
       background-color: #00264d;
       padding: 12px 0;
@@ -34,26 +34,45 @@
       color: #66b3ff;
     }
 
-    /* ---------- Header ---------- */
+    /* Header with Banner Background */
     header {
       text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #004080, #0059b3);
+      padding: 60px 20px;
+      background: url("WhatsApp_Image_Blue.jpeg") no-repeat center center/cover;
+      color: white;
+      position: relative;
     }
 
-    header img {
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 80, 0.55);
+      z-index: 1;
+    }
+
+    header .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    header img.profile {
       width: 160px;
       height: 160px;
       border-radius: 50%;
       border: 4px solid white;
       margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.6);
     }
 
     h1 {
       font-size: 30px;
       margin-bottom: 8px;
       color: #ffffff;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     }
 
     p.subtitle {
@@ -61,7 +80,7 @@
       color: #cce0ff;
     }
 
-    /* ---------- Section Boxes ---------- */
+    /* Section Boxes */
     section {
       background: white;
       color: #003366;
@@ -104,7 +123,6 @@
       transform: scale(1.05);
     }
 
-    /* ---------- Footer ---------- */
     footer {
       text-align: center;
       padding: 20px;
@@ -125,7 +143,7 @@
 </head>
 <body>
 
-  <!-- Navigation Menu -->
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -134,11 +152,13 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Header -->
+  <!-- Header with 2 photos -->
   <header>
-    <img src="WhatsApp_Image.jpeg" alt="Dr. Paritosh Srivastava" />
-    <h1>Dr. Paritosh Srivastava</h1>
-    <p class="subtitle">IBBI Registered Valuer | Environmental Engineer | Data Science Expert</p>
+    <div class="content">
+      <img class="profile" src="Photo_Paritosh.jpeg" alt="Dr. Paritosh Srivastava" />
+      <h1>Dr. Paritosh Srivastava</h1>
+      <p class="subtitle">IBBI Registered Valuer | Environmental Engineer | Data Science Expert</p>
+    </div>
   </header>
 
   <!-- About -->
@@ -180,7 +200,7 @@
     </ul>
   </section>
 
-  <!-- Updates Section -->
+  <!-- Updates -->
   <section id="updates">
     <h2>Latest Updates</h2>
     <ul>
@@ -190,7 +210,7 @@
     </ul>
   </section>
 
-  <!-- IBBI Important Links -->
+  <!-- IBBI Links -->
   <section id="ibbi">
     <h2>IBBI Important Links</h2>
     <ul>
@@ -220,7 +240,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Dr. Paritosh Srivastava | Built with ❤️ using GitHub Pages</p>
   </footer>
