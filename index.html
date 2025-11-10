@@ -34,7 +34,7 @@
       color: #66b3ff;
     }
 
-    /* Header with Banner Background */
+    /* Header */
     header {
       text-align: center;
       padding: 60px 20px;
@@ -42,7 +42,6 @@
       color: white;
       position: relative;
     }
-
     header::after {
       content: "";
       position: absolute;
@@ -53,12 +52,10 @@
       background: rgba(0, 0, 80, 0.55);
       z-index: 1;
     }
-
     header .content {
       position: relative;
       z-index: 2;
     }
-
     header img.profile {
       width: 160px;
       height: 160px;
@@ -74,13 +71,12 @@
       color: #ffffff;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     }
-
     p.subtitle {
       font-size: 16px;
       color: #cce0ff;
     }
 
-    /* Section Boxes */
+    /* Sections */
     section {
       background: white;
       color: #003366;
@@ -89,14 +85,12 @@
       padding: 25px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
-
     h2 {
       color: #004080;
       border-bottom: 2px solid #004080;
       padding-bottom: 8px;
       margin-bottom: 15px;
     }
-
     ul {
       margin-left: 20px;
     }
@@ -106,6 +100,7 @@
       margin: 30px 0;
     }
 
+    /* General Button Style */
     .btn {
       display: inline-block;
       background-color: #004080;
@@ -117,10 +112,27 @@
       font-weight: bold;
       transition: background 0.3s, transform 0.2s;
     }
-
     .btn:hover {
       background-color: #0059b3;
       transform: scale(1.05);
+    }
+
+    /* 🔹 Special Glowing Button */
+    .btn-highlight {
+      background: linear-gradient(135deg, #00b4db, #0083b0);
+      box-shadow: 0 0 15px rgba(0, 180, 219, 0.7);
+      animation: pulseGlow 2s infinite;
+    }
+    .btn-highlight:hover {
+      background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+      box-shadow: 0 0 25px rgba(0, 180, 219, 1);
+      transform: scale(1.08);
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 10px rgba(0, 180, 219, 0.6); }
+      50% { box-shadow: 0 0 20px rgba(0, 255, 200, 0.9); }
+      100% { box-shadow: 0 0 10px rgba(0, 180, 219, 0.6); }
     }
 
     footer {
@@ -135,7 +147,6 @@
       color: #004080;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
@@ -152,7 +163,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Header with 2 photos -->
+  <!-- Header -->
   <header>
     <div class="content">
       <img class="profile" src="1727873783428.jfif" alt="Dr. Paritosh Srivastava" />
@@ -165,17 +176,17 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am <strong>Dr. Paritosh Srivastava</strong>, an 
-      <strong>IBBI Registered Valuer, Environmental Engineer, and Data Science Expert</strong>, 
+      I am <strong>Dr. Paritosh Srivastava</strong>, an
+      <strong>IBBI Registered Valuer, Environmental Engineer, and Data Science Expert</strong>,
       dedicated to guiding professionals and students in the field of valuation and sustainability.
     </p>
     <p>
-      The <strong>IBBI Valuation Exam</strong>, conducted by the Insolvency and Bankruptcy Board of India (IBBI), 
-      certifies individuals aspiring to become Registered Valuers under the 
+      The <strong>IBBI Valuation Exam</strong>, conducted by the Insolvency and Bankruptcy Board of India (IBBI),
+      certifies individuals aspiring to become Registered Valuers under the
       <em>Companies (Registered Valuers and Valuation) Rules, 2017</em>.
     </p>
     <p>
-      If you have completed the <strong>50-hour Valuation Course</strong> through any Registered Valuers Organisation (RVO) 
+      If you have completed the <strong>50-hour Valuation Course</strong> through any Registered Valuers Organisation (RVO)
       but haven’t yet cleared the exam, you can contact me for mentorship and preparation guidance.
     </p>
     <ul>
@@ -202,8 +213,16 @@
   <section id="updates">
     <h2>Latest Updates</h2>
     <ul>
-      <li>📢 Upcoming Guidance Sessions for IBBI Valuation Exam – Registration Open.</li>
-      <li>🆕 New course on “Sustainability & Net Zero Readiness” launching soon.</li>
+      <li>📢 Upcoming Guidance Sessions for IBBI Valuation Exam – 
+        <a href="https://github.com/pari142224/IBBI-Valuation-Exam" target="_blank">
+          Registration Open on GitHub
+        </a>.
+      </li>
+      <li>🆕 New course on “Sustainability & Net Zero Readiness” launching soon – 
+        <a href="https://github.com/pari142224/ESG" target="_blank">
+          View Course Repository
+        </a>.
+      </li>
       <li>🎯 ESG and Valuation Webinar – January 2026.</li>
     </ul>
   </section>
@@ -221,15 +240,14 @@
   <section id="contact">
     <h2>Contact</h2>
     <p>📧 Email: <a href="mailto:dr.valuer@yahoo.com">dr.valuer@yahoo.com</a></p>
-    <p>🌐 LinkedIn: 
+    <p>🌐 LinkedIn:
       <a href="https://www.linkedin.com/company/valuation-exam-practice/" target="_blank">
         linkedin.com/company/valuation-exam-practice
       </a>
     </p>
-   
 
     <div class="buttons">
-      <a class="btn" href="mailto:dr.valuer@yahoo.com">📘 Book Guidance Session</a>
+      <a class="btn btn-highlight" href="https://forms.gle/qLCpznFMxHDTk2h29" target="_blank">📘 Book Guidance Session</a>
       <a class="btn" href="https://wa.me/917053618311" target="_blank">💬 WhatsApp Contact</a>
       <a class="btn" href="https://meet.google.com/eom-ckbv-jzw" target="_blank">🎥 Book Google Meet Call</a>
     </div>
@@ -238,6 +256,5 @@
   <footer>
     <p>© 2025 Dr. Paritosh Srivastava | Built with ❤️ using GitHub Pages</p>
   </footer>
-
 </body>
 </html>
